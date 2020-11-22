@@ -18,9 +18,9 @@ namespace SciChart.Tutorial
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindowOption1 : Window
+    public partial class HelloWorldChartExample : Window
     {
-        public MainWindowOption1()
+        public HelloWorldChartExample()
         {
             InitializeComponent();
         }

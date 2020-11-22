@@ -22,9 +22,9 @@ namespace SciChart.Tutorial
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class MainWindowOption2 : Window
+    public partial class HelloWorldChartCodeBehindExample : Window
     {
-        public MainWindowOption2()
+        public HelloWorldChartCodeBehindExample()
         {
             InitializeComponent();
             this.Loaded += OnLoaded;

@@ -59,10 +59,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MainWindowOption2.xaml.cs">
-      <DependentUpon>MainWindowOption2.xaml</DependentUpon>
+    <Compile Include="HelloWorldChartCodeBehindExampleView.xaml.cs">
+      <DependentUpon>HelloWorldChartCodeBehindExampleView.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindowOption1.xaml">
+    <Page Include="HelloWorldChartExampleView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -70,11 +70,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindowOption1.xaml.cs">
-      <DependentUpon>MainWindowOption1.xaml</DependentUpon>
+    <Compile Include="HelloWorldChartExampleView.xaml.cs">
+      <DependentUpon>HelloWorldChartExampleView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MainWindowOption2.xaml">
+    <Page Include="HelloWorldChartCodeBehindExampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
