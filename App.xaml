@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="SciChart_GettingStarted.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:SciChart_GettingStarted"
+    StartupUri="PointMarkersSelectionExampleView.xaml">
+    <Application.Resources />
+</Application>
