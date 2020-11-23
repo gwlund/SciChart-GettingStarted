@@ -22,6 +22,7 @@ namespace SciChart_GettingStarted
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public bool IsSelected { get; set; }
+        public string PointId { get; set; }
     }
     /// <summary>
     /// Interaction logic for PointMarkersSelectionExampleView.xaml
@@ -54,18 +55,18 @@ namespace SciChart_GettingStarted
 
             for (int i = 0; i < count; i++)
             {
-                //dataSeries1.Append(i, Math.Sin(i * 0.1));
-                data1.Add(i, Math.Sin(i * 0.1));
-                data3.Add(i, Math.Cos(i * 0.5));
+                
+                data1.Add("Sin", i, Math.Sin(i * 0.1));
+                data3.Add("Cos", i, Math.Cos(i * 0.5));
             }
 
             // Append data to series
             using (sciChart.SuspendUpdates())
             {
 
-                dataSeries1.Append(data1.XData, data1.YData, data1.XData.Select((d) => new MyMetadata {IsSelected = false}));
+                dataSeries1.Append(data1.XData, data1.YData, data1.XData.Select((d) => new MyMetadata {IsSelected = false, PointId = "Sine"}));
 
-                dataSeries3.Append(data3.XData, data3.YData, data3.XData.Select((d) => new MyMetadata {IsSelected = false}));
+                dataSeries3.Append(data3.XData, data3.YData, data3.XData.Select((d) => new MyMetadata {IsSelected = false, PointId = "Cos"}));
 
                 //for (int i = 0; i < count; i += 4)
                 //{
@@ -85,15 +86,17 @@ namespace SciChart_GettingStarted
 
         public List<double> XData  = new List<double>();
         public List<double> YData = new List<double>();
+        public string ProfileSet;
 
         public Data()
         {
         }
 
-        public void Add(double x, double y)
+        public void Add(string id, double x, double y)
         {
             XData.Add(x);
             YData.Add(y);
+            ProfileSet = id;
         }
     }
 }

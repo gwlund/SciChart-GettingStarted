@@ -11,7 +11,12 @@
     Height="450"
     Loaded="PointMarkersSelectionExampleView_OnLoaded"
     mc:Ignorable="d">
-    <Grid>
+
+    <Window.Resources>
+        <local:MainViewModel x:Key="MainViewModel" />
+    </Window.Resources>
+
+    <Grid DataContext="{StaticResource MainViewModel}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
@@ -24,7 +29,10 @@
         <!--<ext:SciChartInteractionToolbar TargetSurface="{Binding Source={x:Reference Name=sciChart}}" />-->
 
         <!--  Create the chart surface  -->
-        <s:SciChartSurface Name="sciChart" Grid.Column="1">
+        <s:SciChartSurface
+            Name="sciChart"
+            Grid.Column="1"
+            ChartTitle="{Binding ChartTitle}">
 
             <!--  Declare RenderableSeries  -->
             <s:SciChartSurface.RenderableSeries>
@@ -80,6 +88,7 @@
             <!--  Create an X Axis with Growby  -->
             <s:SciChartSurface.XAxis>
                 <s:NumericAxis
+                    AxisTitle="{Binding XAxisTitle}"
                     DrawMajorBands="True"
                     FlipCoordinates="True"
                     GrowBy="0.1, 0.1" />
@@ -88,6 +97,7 @@
             <!--  Create a Y Axis with GrowBy. Optional bands give a cool look and feel for minimal performance impact  -->
             <s:SciChartSurface.YAxes>
                 <s:NumericAxis
+                    AxisTitle="{Binding YAxisTitle}"
                     BorderBrush="#4AB748"
                     BorderThickness="1,0,0,0"
                     DrawMajorBands="True"
@@ -112,6 +122,12 @@
                         SelectionStroke="#009E9C9C" />
                     <s:MouseWheelZoomModifier IsEnabled="True" />
                     <s:RubberBandXyZoomModifier IsEnabled="False" />
+                    <s:LegendModifier
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Top"
+                        Orientation="Horizontal"
+                        ShowLegend="True" />
+                    <s:RolloverModifier ShowTooltipOn="MouseHover" />
                 </s:ModifierGroup>
             </s:SciChartSurface.ChartModifier>
         </s:SciChartSurface>
@@ -121,11 +137,11 @@
             <TextBlock
                 Margin="10"
                 Foreground="#C6C6C6"
-                Text="Selected PointMarkers:" />
+                Text="{Binding TestString}" />
             <ListBox
-                Margin="5"
+                Margin="25"
                 Background="#1C1C1F"
-                BorderBrush="Transparent"
+                BorderBrush="Blue"
                 Foreground="#57A54A"
                 ItemsSource="{Binding Source={x:Reference Name=PointMarkersSelectionModifier}, Path=SelectedPointMarkers}"
                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
@@ -140,6 +156,7 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate DataType="s:DataPointInfo">
                         <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding DataPointMetadata.PointId, StringFormat=', '}" />
                             <TextBlock Text="{Binding DataSeriesName}" />
                             <TextBlock Text="{Binding XValue, StringFormat=', X:{0:##0.##}'}" />
                             <TextBlock Text="{Binding YValue, StringFormat=', Y:{0:##0.##}'}" />
