@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DummyDataProvider.cs" />
     <Compile Include="HelloWorldChartCodeBehindExampleView.xaml.cs">
       <DependentUpon>HelloWorldChartCodeBehindExampleView.xaml</DependentUpon>
     </Compile>
@@ -84,6 +85,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MainViewMode.cs" />
     <Compile Include="PointMarkersSelectionExampleView.xaml.cs">
       <DependentUpon>PointMarkersSelectionExampleView.xaml</DependentUpon>
     </Compile>
