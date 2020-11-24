@@ -59,6 +59,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataPointSelectionModifierExtention.cs" />
     <Compile Include="DummyDataProvider.cs" />
     <Compile Include="HelloWorldChartCodeBehindExampleView.xaml.cs">
       <DependentUpon>HelloWorldChartCodeBehindExampleView.xaml</DependentUpon>
