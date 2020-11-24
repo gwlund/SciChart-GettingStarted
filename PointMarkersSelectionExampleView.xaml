@@ -117,8 +117,8 @@
             <!--  Setting IsEnabled enables or disables a modifier in the Toolbar  -->
             <s:SciChartSurface.ChartModifier>
                 <s:ModifierGroup>
-                    <s:DataPointSelectionModifier
-                        Name="PointMarkersSelectionModifier"
+                    <local:DataPointSelectionModifierExtention
+                        x:Name="PointMarkersSelectionModifier"
                         IsEnabled="True"
                         SelectionFill="#B1B5B2B2"
                         SelectionStroke="#009E9C9C" />
