@@ -20,11 +20,18 @@ namespace SciChart_GettingStarted
         {
             SetSciChartLicense();
 
-            //Temp startup
-            Window w = new PointMarkersSelectionExampleView();
-            w.DataContext = new PointMarkersSelectionExampleViewModel();
-            w.Show();
+        }
 
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow()
+            {
+                DataContext = new MainViewModel()
+            };
+
+            mainWindow.Show();
+
+            base.OnStartup(e);
         }
 
         public static void SetSciChartLicense()

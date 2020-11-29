@@ -27,7 +27,7 @@ namespace SciChart_GettingStarted.Views
     /// <summary>
     /// Interaction logic for PointMarkersSelectionExampleView.xaml
     /// </summary>
-    public partial class PointMarkersSelectionExampleView : Window
+    public partial class PointMarkersSelectionExampleView : UserControl
     {
         public PointMarkersSelectionExampleView()
         {
