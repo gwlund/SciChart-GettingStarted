@@ -1,24 +1,25 @@
 ﻿<Window
-    x:Class="SciChart_GettingStarted.PointMarkersSelectionExampleView"
+    x:Class="SciChart_GettingStarted.Views.PointMarkersSelectionExampleView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:SciChart_GettingStarted"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:s="http://schemas.abtsoftware.co.uk/scichart"
+    xmlns:viewModels="clr-namespace:SciChart_GettingStarted.ViewModels"
     Title="PointMarkersSelectionExampleView"
     Width="800"
     Height="450"
     Loaded="PointMarkersSelectionExampleView_OnLoaded"
     mc:Ignorable="d">
 
-    <Window.Resources>
+    <!--<Window.Resources>
         <local:MainViewModel x:Key="MainViewModel" />
-    </Window.Resources>
+    </Window.Resources>-->
 
 
 
-    <Grid DataContext="{StaticResource MainViewModel}">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
@@ -117,7 +118,7 @@
             <!--  Setting IsEnabled enables or disables a modifier in the Toolbar  -->
             <s:SciChartSurface.ChartModifier>
                 <s:ModifierGroup>
-                    <local:DataPointSelectionModifierExtention
+                    <viewModels:DataPointSelectionModifierExtention
                         x:Name="PointMarkersSelectionModifier"
                         IsEnabled="True"
                         SelectionFill="#B1B5B2B2"

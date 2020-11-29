@@ -59,12 +59,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DataPointSelectionModifierExtention.cs" />
+    <Compile Include="ViewModels\DataPointSelectionModifierExtention.cs" />
     <Compile Include="DummyDataProvider.cs" />
-    <Compile Include="HelloWorldChartCodeBehindExampleView.xaml.cs">
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="Views\HelloWorldChartCodeBehindExampleView.xaml.cs">
       <DependentUpon>HelloWorldChartCodeBehindExampleView.xaml</DependentUpon>
     </Compile>
-    <Page Include="HelloWorldChartExampleView.xaml">
+    <Page Include="Views\HelloWorldChartExampleView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -72,22 +73,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="HelloWorldChartExampleView.xaml.cs">
+    <Compile Include="Views\HelloWorldChartExampleView.xaml.cs">
       <DependentUpon>HelloWorldChartExampleView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="HelloWorldChartCodeBehindExampleView.xaml">
+    <Page Include="Views\HelloWorldChartCodeBehindExampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PointMarkersSelectionExampleView.xaml">
+    <Page Include="Views\PointMarkersSelectionExampleView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainViewMode.cs" />
-    <Compile Include="PointMarkersSelectionExampleView.xaml.cs">
+    <Compile Include="ViewModels\PointMarkersSelectionExampleViewModel.cs" />
+    <Compile Include="Views\PointMarkersSelectionExampleView.xaml.cs">
       <DependentUpon>PointMarkersSelectionExampleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -115,5 +116,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using SciChart.Charting.Visuals;
+using SciChart_GettingStarted.ViewModels;
+using SciChart_GettingStarted.Views;
 
 namespace SciChart_GettingStarted
 {
@@ -17,6 +19,11 @@ namespace SciChart_GettingStarted
         public App()
         {
             SetSciChartLicense();
+
+            //Temp startup
+            Window w = new PointMarkersSelectionExampleView();
+            w.DataContext = new PointMarkersSelectionExampleViewModel();
+            w.Show();
 
         }
 

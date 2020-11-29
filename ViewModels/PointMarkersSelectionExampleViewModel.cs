@@ -4,17 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SciChart.Data.Model;
+using SciChart_GettingStarted.ViewModels;
 
-namespace SciChart_GettingStarted
+namespace SciChart_GettingStarted.ViewModels
 {
-    public class MainViewModel : BindableObject
+    //TODO: SciChart examples using SciChart.Data.Model.Bindable object to provide INotifyPropertyChanged.
+    //What does this buy us? and should we add to viewModelBase?
+    public class PointMarkersSelectionExampleViewModel : ViewModelBase
     {
         private string _test;
         private string _chartTitle = "Chart Title";
         private string _xAxisTitle = "XAxis";
         private string _yAxisTitle = "YAxis";
 
-        public MainViewModel()
+        public PointMarkersSelectionExampleViewModel()
         {
             TestString = "Hello MVVM World!";
         }
@@ -24,7 +27,7 @@ namespace SciChart_GettingStarted
             set
             {
                 _test = value;
-                OnPropertyChanged("TestString");
+                NotifyPropertyChanged();
             }
         }
 
@@ -34,7 +37,7 @@ namespace SciChart_GettingStarted
             set
             {
                 _chartTitle = value;
-                OnPropertyChanged("ChartTitle");
+                NotifyPropertyChanged();
             }
         }
         public string XAxisTitle
@@ -43,7 +46,7 @@ namespace SciChart_GettingStarted
             set
             {
                 _xAxisTitle = value;
-                OnPropertyChanged("XAxisTitle");
+                NotifyPropertyChanged();
             }
         }
         public string YAxisTitle
@@ -52,7 +55,7 @@ namespace SciChart_GettingStarted
             set
             {
                 _yAxisTitle = value;
-                OnPropertyChanged("YAxisTitle");
+                NotifyPropertyChanged();
             }
         }
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using SciChart.Charting.ChartModifiers;
 
-namespace SciChart_GettingStarted
+namespace SciChart_GettingStarted.ViewModels
 {
     //how to bind selectedPoints from DataPointSelectionModifier in XAML to ViewModel
     //https://www.scichart.com/questions/wpf/i-want-to-bind-selectedpointmarkers-of-datapointselectionmodifier

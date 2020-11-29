@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using SciChart.Charting.Model.DataSeries;
 
-namespace SciChart_GettingStarted
+namespace SciChart_GettingStarted.Views
 {
     //Using point meta data
     //https://www.scichart.com/documentation/win/current/webframe.html#DataSeries%20PointMetadata%20API.html
