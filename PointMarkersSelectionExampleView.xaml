@@ -146,7 +146,7 @@
                 Foreground="#C6C6C6"
                 Text="{Binding TestString}" />
             <ListBox
-                Margin="25"
+                Margin="5,35,5,5"
                 Background="#1C1C1F"
                 BorderBrush="Blue"
                 Foreground="#57A54A"
