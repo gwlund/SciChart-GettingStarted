@@ -9,7 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
         <Button x:Name="GoHomeView" Content="Home" Command="{Binding TestOldCommand}"/>
-        <Button x:Name="GoTopChartView" Content="Top Chart" />
+        <Button x:Name="GoTopChartView" Content="Top Chart" Command="{Binding TestNewCommand}"/>
         <Button x:Name="GoBottomChartView" Content="Bottom Chart" />
     </StackPanel>
 </UserControl>

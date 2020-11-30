@@ -7,17 +7,25 @@ using System.Windows.Input;
 
 namespace SciChart_GettingStarted.ViewModels
 {
+    //
+    /// <summary>
+    /// Delegate for command logic.  Enables View to bind commands to objects that are not part of the element tree.  Some people call this relay command
+    /// </summary>
     public class ActionCommand : ICommand
     {
-        readonly Action<object> action;
+        readonly Action<object> execute;
         readonly Predicate<object> canExecute;
+        
         private EventHandler eventHandler;
 
-        public ActionCommand(Action<object> action) : this(action, null) { }
+        public ActionCommand(Action<object> execute) : this(execute, null) { }
 
-        public ActionCommand(Action<object> action, Predicate<object> canExecute)
+        public ActionCommand(Action<object> execute, Predicate<object> canExecute)
         {
-            this.action = action;
+            if (execute == null)
+                throw new ArgumentNullException("execute");
+
+            this.execute = execute;
             this.canExecute = canExecute;
         }
 
@@ -47,7 +55,7 @@ namespace SciChart_GettingStarted.ViewModels
 
         public void Execute(object parameter)
         {
-            action(parameter);
+            execute(parameter);
         }
     }
 }

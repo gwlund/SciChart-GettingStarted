@@ -10,25 +10,40 @@ namespace SciChart_GettingStarted.ViewModels
 {
     public class NavigationViewModel: ViewModelBase
     {
-        public ICommand TestOldCommand
-        {
-            get;
-            private set;
-        }
         public NavigationViewModel()
         {
            TestOldCommand = new TestOldCommand(this);   
         }
 
-
-        public ICommand TestCommand
+        public ICommand TestOldCommand
         {
-            get { return new ActionCommand(action => Test()); }
+            get;
+            private set;
+        }
+
+        private ActionCommand testNewCommand;
+
+        public ICommand TestNewCommand
+        {
+            get
+            {
+                if (testNewCommand == null)
+                {
+                    testNewCommand = new ActionCommand(param=>this.Test(), param=> this.CanTest());
+                }
+
+                return testNewCommand;
+            }
         }
 
         public void Test()
         {
             //TODO: update
+        }
+
+        private bool CanTest()
+        {
+            return true;
         }
     }
 }
