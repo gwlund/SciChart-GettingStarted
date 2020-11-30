@@ -21,6 +21,7 @@ namespace SciChart_GettingStarted.ViewModels
         {
             TestString = "Hello MVVM World!";
         }
+
         public string TestString
         {
             get { return _test; }

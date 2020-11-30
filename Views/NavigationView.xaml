@@ -4,10 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SciChart_GettingStarted.Views"
+             xmlns:vm="clr-namespace:SciChart_GettingStarted.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <Button x:Name="TestCommand" Content="Home"/>
+        <Button x:Name="GoHomeView" Content="Home" Command="{Binding TestOldCommand}"/>
         <Button x:Name="GoTopChartView" Content="Top Chart" />
         <Button x:Name="GoBottomChartView" Content="Bottom Chart" />
     </StackPanel>

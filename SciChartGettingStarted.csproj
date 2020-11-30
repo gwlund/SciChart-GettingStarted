@@ -59,9 +59,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\TestCommand.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\ActionCommand.cs" />
     <Compile Include="ViewModels\DataPointSelectionModifierExtention.cs" />
     <Compile Include="DummyDataProvider.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
